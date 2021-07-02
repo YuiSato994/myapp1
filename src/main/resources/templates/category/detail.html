@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">    
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/webjars/font-awesome/css}">
+    <link rel="stylesheet" th:href="@{/detail.css}">
+    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+</head>
+
+<body>
+    <div class="header">
+        <p>[[${category.name}]]の口コミ一覧</p>
+    </div>
+<table> 
+<thead>
+    <div class="main">
+    <p>
+    <tr>
+        <th>ID</th>
+        <th>商品名:</th>
+        <th>ユーザー名:</th>
+        <th>口コミ:</th>
+    </tr>
+    </p>
+    </div>
+</thead>   
+<tbody>
+    <tr th:each="r :${review}" th:object="${review}">
+        <td th:text="${r.id}"></td>
+        <td th:text="${r.itemname}"></td>
+        <td th:text="${r.username}"></td>
+        <td th:text="${r.comment}"></td>
+    </tr>
+</tbody> 
+</table> 
+<div class="bottom"> 
+<a style="text-align: center;" th:href="@{/home}">HOMEへ戻る</a><br>
+</div>  
+</body>
+</html>

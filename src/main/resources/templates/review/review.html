@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport">
+<link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
+<link rel="stylesheet" th:href="@{/webjars/font-awesome/css}">
+<link rel="stylesheet" th:href="@{/review.css}">
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+</head>
+ 
+<body>
+    <div class="header">
+        <p>投稿フォーム</p>
+    </div>
+    <div class="title">
+        <p>口コミ記入欄</p>
+    </div>
+    <div class="main">
+    <form method="post" th:action="@{/home/review}" th:object="${review}">
+
+        <select th:field="*{category}">
+            <option th:each="ct : ${categorylist}" th:value="${ct.id}" th:text="${ct.name}"></option>
+        </select>   選択<br>
+
+        <p>
+        [[${review.itemname}]]<br>
+        <label for="itemname">商品名 :</label>
+        <input type="text" th:field="*{itemname}" class="form-control">
+        </p>
+
+        [[${review.username}]]
+        <label for="username">ユーザー名 :</label>
+        <input type="text" th:field="*{username}" class="form-control"><br>
+
+        <p>
+        [[${review.comment}]]
+        <label for="comment">口コミ :</label><br>
+        <input type="text" th:field="*{comment}" class="form-control">
+        </p><br>
+
+        <p>
+        <button type="submit">投稿する</button>
+        </p>
+    </div>
+    </form>
+     
+</body>
+</html>

@@ -1,0 +1,22 @@
+.header { /* 投稿フォーム */
+    font-size: 20px;
+    padding-top: 5px;
+    text-align: center;
+    background-color: aliceblue;
+}
+
+.title { /* 口コミ記入欄*/
+    font-size: 25px;
+    padding-left: 20px;
+    padding-top: 15px;
+}
+
+.main { /*以下全部*/
+    font-size: 15px;
+    padding-left: 50px;
+    padding-top: 20px;
+}
+
+.form-control {
+    width: 30px;
+}

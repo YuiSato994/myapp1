@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">    
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/webjars/font-awesome/css}">
+    <link rel="stylesheet" th:href="@{/category.css}">
+    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+</head>
+
+<body>
+    <div class="title">
+        <p>categories</p>
+    </div>
+<form method="post" th:action="@{/home/category}" th:object="${category}">
+    <div class="main">
+    <h2>カテゴリーを選択</h2>
+    </div>
+    <div class="category">
+    <ul th:each="ct : ${categorylist}">
+        <li><input type="radio" name="category" th:value="${ct.id}" th:text="${ct.name}" /></li>
+    </ul>
+    </div>
+    <div class="last">
+    <input type="submit" value="詳細へ">
+    </div>
+</form>    
+</body>
+</html>

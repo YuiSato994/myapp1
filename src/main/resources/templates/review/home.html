@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!-- 1のページ -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <link rel="stylesheet" th:href="@{webjars/bootstrap/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{webjars/font-awesome/css}">
+    <link rel="stylesheet" th:href="@{/home.css}">
+    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+    <title>demo application</title>
+</head>
+
+<body>
+    <div class="header">
+        <p class="text-center">Cyber Cosmetics Review Site</p>
+    </div>
+    <div class="main">
+        <p style="text-align: center;">
+            ～あなたのその使っているコスメ、教えてください～
+        </p>
+    </div>
+    <div class="sub">
+        <p>このコスメ、とてもよかった！　このコスメ、いまいちだったなぁ<br>
+            などを共有し、よりよい商品に出会いませんか？
+        </p>
+    </div>
+    <div class="link">
+        <a th:href="@{home/review}">口コミ投稿はコチラ</a><br/>
+        <a th:href="@{home/category}">口コミ閲覧はコチラ</a><br/>
+    </div>
+</body>
+</html>

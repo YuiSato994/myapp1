@@ -9,7 +9,7 @@
     <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
 </head>
 
-<body>
+<body background="https://sozai-good.com/uploads/37836/37836_sample.png">
     <div class="header">
         <p>[[${category.name}]]の口コミ一覧</p>
     </div>
@@ -37,6 +37,7 @@
 </table> 
 <div class="bottom"> 
 <a style="text-align: center;" th:href="@{/home}">HOMEへ戻る</a><br>
+<a style="text-align: center;" th:href="@{/home/review}">さらに投稿する</a>
 </div>  
 </body>
 </html>

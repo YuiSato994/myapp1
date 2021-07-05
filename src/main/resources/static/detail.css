@@ -1,8 +1,12 @@
 .header{
     font-size: 25px;
-    font-weight: bold;
     text-align: center;
     background-color: moccasin;
+    font-family: Meiryo UI;
+}
+
+.main {
+    font-family: Meiryo UI;
 }
 
 

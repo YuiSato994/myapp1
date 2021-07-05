@@ -3,12 +3,14 @@
     padding-top: 5px;
     text-align: center;
     background-color: aliceblue;
+    font-family: Yu Gothic;
 }
 
 .title { /* 口コミ記入欄*/
     font-size: 25px;
     padding-left: 20px;
     padding-top: 15px;
+    font-family: Yu Gothic;
 }
 
 .main { /*以下全部*/
@@ -18,5 +20,5 @@
 }
 
 .form-control {
-    width: 30px;
+    width: 350px;
 }
